@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.background {
+    height: 100vh;
+    width: 100vw;
+    background: url('images/background-img.png') no-repeat center center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.bird {
+    height: 12vh;
+    width: 16vw;
+    position: fixed;
+    top: 40vh;
+    left: 30vw;
+    z-index: 100;
+    pointer-events: none; /* Prevent accidental touch clicks on bird */
+}
+
+.pipe_sprite {
+    position: fixed;
+    top: 40vh;
+    left: 100vw;
+    height: 70vh;
+    width: 10vw;
+    background: radial-gradient(lightgreen 50%, green);
+    border: 5px solid black;
+}
+
+.message {
+    position: absolute;
+    z-index: 10;
+    color: black;
+    top: 30%;
+    left: 50%;
+    font-size: 5vw;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px 40px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.message:hover {
+    background-color: #f0f0f0;
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+.messageStyle {
+    background: white;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5%;
+}
+
+.score {
+    position: fixed;
+    z-index: 10;
+    height: 10vh;
+    font-size: 8vh;
+    font-weight: 100;
+    color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.score_val {
+    color: gold;
+    font-weight: bold;
+}
+
+/* ----------------- RESPONSIVE BREAKPOINTS ----------------- */
+
+@media only screen and (max-width: 1080px) {
+    .message {
+        font-size: 6vw;
+        top: 50%;
+    }
+
+    .score {
+        font-size: 8vh;
+    }
+
+    .bird {
+        width: 20vw;
+        height: 15vh;
+    }
+
+    .pipe_sprite {
+        width: 14vw;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .message {
+        font-size: 8vw;
+    }
+
+    .bird {
+        width: 25vw;
+        height: 18vh;
+    }
+
+    .pipe_sprite {
+        width: 18vw;
+    }
+
+    .score {
+        font-size: 6vh;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .message {
+        font-size: 10vw;
+    }
+
+    .bird {
+        width: 30vw;
+        height: 20vh;
+    }
+
+    .pipe_sprite {
+        width: 25vw;
+    }
+
+    .score {
+        font-size: 5vh;
+    }
+}

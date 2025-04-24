@@ -1,2 +1,1 @@
-# Game__002
-created By Azan Azam
+# Flappy-Bird-Game with JavaScript
